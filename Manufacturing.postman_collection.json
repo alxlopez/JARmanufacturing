@@ -1,0 +1,6498 @@
+{
+	"info": {
+		"_postman_id": "b6f05e2c-01d5-3893-c41e-82d7bcb0aad1",
+		"name": "Manufacturing",
+		"description": "Endpoints used in **Ibisa Manufacturing** and some customized for **Lab Milanes**.\n\n> **Note:**\n\n> - All the endpoints customized for Laboratorio Milanes are filed under the *Milanes* folder.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1324528"
+	},
+	"item": [
+		{
+			"name": "Equipments",
+			"item": [
+				{
+					"name": "equipmentCapabilityTests",
+					"item": [
+						{
+							"name": "[GET] get all equipmentCapabilityTests",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentCapabilityTests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentCapabilityTests"
+									]
+								},
+								"description": "List all the Capability Tests performed to the equipments"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] Search equipmentCapabilityTests",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentCapabilityTests/search",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentCapabilityTests",
+										"search"
+									]
+								},
+								"description": "Search all equipmentCapabilityTests by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| name\t   | String\t|  F\t   |\n| location | String\t|  F\t   |\n| version  | String\t|  F\t   |"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create equipmentCapabilityTests",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"code\": null,\n\t\"name\": null,\n\t\"description\": null,\n\t\"hierarchyScope\": 2,\n\t\"location\": null,\n\t\"version\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentCapabilityTests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentCapabilityTests"
+									]
+								},
+								"description": "Create a new EquipmentCapabilityTest"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk equipmentCapabilityTests",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n\t\t\"id\":1,\n\t\t\"code\": null,\n\t\t\"name\": null,\n\t\t\"description\": null,\n\t\t\"hierarchyScope\": 0,\n\t\t\"location\": null,\n\t\t\"version\": null\n\t},\n\t{\n\t\t\"id\":2,\n\t\t\"code\": null,\n\t\t\"name\": null,\n\t\t\"description\": null,\n\t\t\"hierarchyScope\": 0,\n\t\t\"location\": null,\n\t\t\"version\": null\n\t}\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentCapabilityTests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentCapabilityTests"
+									]
+								},
+								"description": "Update a set of EquipmentCapabilityTest at the same time."
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update single equipmentCapabilityTests",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n\t\t\"id\":1,\n\t\t\"code\": null,\n\t\t\"name\": null,\n\t\t\"description\": null,\n\t\t\"hierarchyScope\": 0,\n\t\t\"location\": null,\n\t\t\"version\": null\n\t}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentCapabilityTests/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentCapabilityTests",
+										"1"
+									]
+								},
+								"description": "Update a single EquipmentCapabilityTest by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "[DEL] Delete a equipmentCapabilityTests by ID",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentCapabilityTests/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentCapabilityTests",
+										"1"
+									]
+								},
+								"description": "Delete a equipmentCapabilityTests by id"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "equipmentClasses",
+					"item": [
+						{
+							"name": "[GET] get all equipmentClasses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentClasses/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentClasses",
+										""
+									]
+								},
+								"description": "List all the equipmentClasses available"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] Search EquipmentClasses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentClasses/search",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentClasses",
+										"search"
+									]
+								},
+								"description": "Search all equipmentClasses by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| equipmentLevel | EquipmentLevel\t|  F\t   |\n| location | String\t|  F\t   |\n\n\nwhere **EquipmentLabel** may have the following values:\n- ENTERPRISE,\n- SITE,\n- AREA,\n- WORKCENTER,\n- WORKUNIT,\n- STORAGEUNIT"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create EquipmentClasses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": null,\n\t\"code\": null,\n\t\"description\": null,\n\t\"equipmentLevel\":null,\n\t\"hierarchyScope\": 0,\n\t\"location\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentClasses"
+									]
+								},
+								"description": "Create a new EquipmentClasses"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk EquipmentClasses",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n\t\t\"id\": 1,\n\t\t\"code\": null,\n\t\t\"description\": null,\n\t\t\"equipmentLevel\":null,\n\t\t\"hierarchyScope\": 0,\n\t\t\"location\": null\n\t},\n\t{\n\t\t\"id\": 2,\n\t\t\"code\": null,\n\t\t\"description\": null,\n\t\t\"equipmentLevel\":null,\n\t\t\"hierarchyScope\": 0,\n\t\t\"location\": null\n\t}\n]\n\t"
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentClasses"
+									]
+								},
+								"description": "Update a set of EquipmentClasses at the same time"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update single EquipmentClasses",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n\t{\n\t\t\"id\": 1,\n\t\t\"code\": null,\n\t\t\"description\": null,\n\t\t\"equipmentLevel\":null,\n\t\t\"hierarchyScope\": 0,\n\t\t\"location\": null\n\t}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentClasses/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentClasses",
+										"1"
+									]
+								},
+								"description": "Update a single EquipmentClasses by id"
+							},
+							"response": []
+						},
+						{
+							"name": "[DEL] Delete equipmentClasses by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/equipmentClasses/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"equipmentClasses",
+										"1"
+									]
+								},
+								"description": "Delete a single equipmentClasses by id"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[GET] all Equipments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments"
+							]
+						},
+						"description": "Get a list of all equipments configured and its properties and links"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get equipments Hierarchy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/2/hierarchy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								"2",
+								"hierarchy"
+							]
+						},
+						"description": "Search an equipment given its ID and search all the elements related to it by hierarchy."
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get equipments relationship",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/relationShip?codeBaseEquipment={code}&codeSearchedEquipment={code}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								"relationShip"
+							],
+							"query": [
+								{
+									"key": "codeBaseEquipment",
+									"value": "{code}"
+								},
+								{
+									"key": "codeSearchedEquipment",
+									"value": "{code}"
+								}
+							]
+						},
+						"description": "get Equipments relationship by the code of Searched Equipment and the code of the Base Equipment. Both parameters are *required* and are *string*."
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search Equipment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								"search"
+							]
+						},
+						"description": "Search equipments by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| equipmentLevel | EquipmentLevel\t|  F\t   |\n| location | String\t|  F\t   |\n\nwhere **EquipmentLabel** may have the following values:\n- ENTERPRISE,\n- SITE,\n- AREA,\n- WORKCENTER,\n- WORKUNIT,\n- STORAGEUNIT"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update bulk Equipment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 1,\n    \"code\": null,\n    \"description\": null,\n    \"equipmentLevel\": null,\n    \"hierarchyScope\": null,\n    \"location\": null,\n    \"parent_id\": 0\n  },\n  {\n    \"id\": 2,\n    \"code\": null,\n    \"description\": null,\n    \"equipmentLevel\": null,\n    \"hierarchyScope\": null,\n    \"location\": null,\n    \"parent_id\": 0\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								""
+							]
+						},
+						"description": "Update a set of Equipments at the same time based on the info provided.\n\n**EquipmentLabel** may have the following values:\n- ENTERPRISE,\n- SITE,\n- AREA,\n- WORKCENTER,\n- WORKUNIT,\n- STORAGEUNIT"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update single Equipment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 1,\r\n\t\"code\": null,\r\n\t\"description\": null,\r\n\t\"equipmentLevel\": null,\r\n\t\"hierarchyScope\": null,\r\n\t\"location\":null,\r\n\t\"parent_id\": 0\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/63",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								"63"
+							]
+						},
+						"description": "Update an equipment by ID\n\nwhere **EquipmentLabel** may have the following values:\n- ENTERPRISE,\n- SITE,\n- AREA,\n- WORKCENTER,\n- WORKUNIT,\n- STORAGEUNIT"
+					},
+					"response": []
+				},
+				{
+					"name": "[DEL] Delete equipment by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								"1"
+							]
+						},
+						"description": "Delete an Equipment by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[DEL] Delete all Equipment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/equipments/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"equipments",
+								""
+							]
+						},
+						"description": "Delete all equipments configured"
+					},
+					"response": []
+				}
+			],
+			"description": "Set of endpoints to manage the equipments"
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "eventDefinitions",
+					"item": [
+						{
+							"name": "[POST] Create eventDefinition",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"code\": null,\n\t\"eventType\": \"WORKFLOW_NODE_COMMAND\",\n\t\"description\": null,\n\t\"notificationBody\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventDefinitions",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventDefinitions"
+									]
+								},
+								"description": "Create a new eventDefinition according to the *codes* and *EventType*\n\nThe **codes** values may be:\n- ADQUIRE,\n- INITIATE,\n- START,\n- HOLD,\n- RESTART,\n- STOP,\n- ABORT,\n- COMPLETE,\n- REMOVE,\n\n\nThe **EventTypes** values may be:\n- WORKFLOW_NODE_COMMAND"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update Single eventDefinition by Id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\":1,\n\t\"code\": null,\n\t\"eventType\": \"WORKFLOW_NODE_COMMAND\",\n\t\"description\": null,\n\t\"notificationBody\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventDefinitions?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventDefinitions"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Update a single eventDefinition by Id\n\nThe **codes** values may be:\n- ADQUIRE,\n- INITIATE,\n- START,\n- HOLD,\n- RESTART,\n- STOP,\n- ABORT,\n- COMPLETE,\n- REMOVE,\n\n\nThe **EventTypes** values may be:\n- WORKFLOW_NODE_COMMAND"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update Bulk eventDefinition",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n\t\t\"id\":1,\n\t\t\"code\": null,\n\t\t\"eventType\": \"WORKFLOW_NODE_COMMAND\",\n\t\t\"description\": null,\n\t\t\"notificationBody\": null\n\t}\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventDefinitions?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventDefinitions"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Update a set of eventDefinition at the same time.\n\nThe **codes** values may be:\n- ADQUIRE,\n- INITIATE,\n- START,\n- HOLD,\n- RESTART,\n- STOP,\n- ABORT,\n- COMPLETE,\n- REMOVE,\n\n\nThe **EventTypes** values may be:\n- WORKFLOW_NODE_COMMAND"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "eventType",
+					"item": [
+						{
+							"name": "[GET] get eventTypes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventTypes",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventTypes"
+									]
+								},
+								"description": "Get a list of EventTypes and its properties"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create eventTypes",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"code\": null,\n\t\"description\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventTypes",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventTypes"
+									]
+								},
+								"description": "Create a new EventTypes record"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update single eventTypes",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\":1,\n\t\"code\": null,\n\t\"description\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventTypes/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventTypes",
+										"1"
+									]
+								},
+								"description": "Update a single eventType by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk eventTypes",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n\t\"id\":1,\n\t\"code\": null,\n\t\"description\": null\n},\n{\n\t\"id\":2,\n\t\"code\": null,\n\t\"description\": null\n}]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/eventTypes/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"eventTypes",
+										""
+									]
+								},
+								"description": "Update a set of eventType at the same time given a JSON"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[GET] get all events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"reporterId\":\"fabian\",\n\t\"reporterType\":\"user\",\n\t\"date\":null,\n\t\"comments\": \"this is a comment\",\n\t\"eventDefinition\":{\"id\":1},\n\t\"processInstanceId\":10096,\n\t\"activityId\":\"yeseria\",\n\t\"properties\": \n\t[\n\t\t{\n\t\t\"code\": \"prop1\",\n\t\t\"value\": \"val1\",\n\t\t\"properties\": \n\t\t[\n\t\t\t{\n\t\t\t\t\"code\": \"val2\",\n\t\t\t\t\"value\": \"val2\"\n\t\t\t}\n\t\t]\n\t\t\t\n\t\t\n\t\t},\n\t\t\n\t\t{\n\t\t\"code\": \"val2\",\n\t\t\"value\": \"val2\"\n\t\t}\n\t]\n\t\n\t\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"events"
+							]
+						},
+						"description": " List all events available"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get events by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"reporterId\":\"fabian\",\n\t\"reporterType\":\"user\",\n\t\"date\":null,\n\t\"comments\": \"this is a comment\",\n\t\"eventDefinition\":{\"id\":1},\n\t\"processInstanceId\":10096,\n\t\"activityId\":\"yeseria\",\n\t\"properties\": \n\t[\n\t\t{\n\t\t\"code\": \"prop1\",\n\t\t\"value\": \"val1\",\n\t\t\"properties\": \n\t\t[\n\t\t\t{\n\t\t\t\t\"code\": \"val2\",\n\t\t\t\t\"value\": \"val2\"\n\t\t\t}\n\t\t]\n\t\t\t\n\t\t\n\t\t},\n\t\t\n\t\t{\n\t\t\"code\": \"val2\",\n\t\t\"value\": \"val2\"\n\t\t}\n\t]\n\t\n\t\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/events/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"events",
+								"6"
+							]
+						},
+						"description": "Get event properties by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get event by property",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/events?entityId=5001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"events"
+							],
+							"query": [
+								{
+									"key": "entityId",
+									"value": "5001"
+								}
+							]
+						},
+						"description": "Search events by any of its properties:\n- entityType, \n- entityId, \n- eventType, \n- action"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] create event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"WORK_DIRECTIVE\",\n  \"eventDefinition\": {\n    \"code\": \"INITIATE\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"events"
+							]
+						},
+						"description": "Create a new event according to the entry data:\n \n**EntityType** values:\n- WORK_DIRECTIVE: to initiate/save a workDirective\n- PROCESS: to start, abort, remove a running process\n- USER_TASK: to complete a task of a process,\n- SUBPROCESS: to start, abort, remove a running subprocess\n- WORKFLOW_NODE\n\n**EventDefinition** Code values:\n- INITIATE: Initiate a process,\n- START: Start a task,\n- HOLD: pause/hold a process or taks,\n- RESTART,\n- STOP,\n- ABORT: abort a process,\n- COMPLETE: complete a task,\n- REMOVE: Delete a process"
+					},
+					"response": [
+						{
+							"name": "entityType: PROCESS - eventDefinition: ABORT",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"PROCESS\",\n  \"eventDefinition\": {\n    \"code\": \"ABORT\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/events",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "entityType: USER_TASK - eventDefinition: HOLD",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"USER_TASK\",\n  \"eventDefinition\": {\n    \"code\": \"HOLD\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/events",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "entityType: PROCESS - eventDefinition: REMOVE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"PROCESS\",\n  \"eventDefinition\": {\n    \"code\": \"REMOVE\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/events",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "entityType: USER_TASK - eventDefinition: COMPLETE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"USER_TASK\",\n  \"eventDefinition\": {\n    \"code\": \"COMPLETE\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/events",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "entityType: USER_TASK - eventDefinition: START",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"USER_TASK\",\n  \"eventDefinition\": {\n    \"code\": \"START\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/events",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "entityType: WORK_DIRECTIVE - eventDefinition: INITIATE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"entityId\": 3,\n  \"entityType\": \"WORK_DIRECTIVE\",\n  \"eventDefinition\": {\n    \"code\": \"INITIATE\"\n  },\n  \"reporterId\": \"alexander.jaramillo@labmilanes.com\",\n  \"parameters\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/events",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[DEL] delete event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/mes/events/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"mes",
+								"events",
+								"7"
+							]
+						},
+						"description": "delete an event by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update event by Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":7,\n\t\"entityId\": 0,\n\t\"entityType\": null,\n\t\"eventDefinition\": {\n\t  \"code\": null\n\t},\n\t\"reporterId\": null,\n\t\"parameters\": []\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/events/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"events",
+								"3"
+							]
+						},
+						"description": "Update a single event by ID\n\n**EntityType** values:\n- WORK_DIRECTIVE: to initiate/save a workDirective\n- PROCESS: to start, abort, remove a running process\n- USER_TASK: to complete a task of a process,\n- SUBPROCESS: to start, abort, remove a running subprocess\n- WORKFLOW_NODE\n\n**EventDefinition** Code values:\n- INITIATE: Initiate a process,\n- START: Start a task,\n- HOLD: pause/hold a process or taks,\n- RESTART,\n- STOP,\n- ABORT: abort a process,\n- COMPLETE: complete a task,\n- REMOVE: Delete a process"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update Bulk events",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 7,\n    \"entityId\": 0,\n    \"entityType\": null,\n    \"eventDefinition\": {\n      \"code\": null\n    },\n    \"reporterId\": null,\n    \"parameters\": []\n  },\n  {\n    \"id\": 10,\n    \"entityId\": 0,\n    \"entityType\": null,\n    \"eventDefinition\": {\n      \"code\": null\n    },\n    \"reporterId\": null,\n    \"parameters\": []\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"events"
+							]
+						},
+						"description": "Update a set of events at the same time given a JSON data\n\n**EntityType** values:\n- WORK_DIRECTIVE: to initiate/save a workDirective\n- PROCESS: to start, abort, remove a running process\n- USER_TASK: to complete a task of a process,\n- SUBPROCESS: to start, abort, remove a running subprocess\n- WORKFLOW_NODE\n\n**EventDefinition** Code values:\n- INITIATE: Initiate a process,\n- START: Start a task,\n- HOLD: pause/hold a process or taks,\n- RESTART,\n- STOP,\n- ABORT: abort a process,\n- COMPLETE: complete a task,\n- REMOVE: Delete a process"
+					},
+					"response": []
+				}
+			],
+			"description": "Set of endpoints to manage the events"
+		},
+		{
+			"name": "Enumerations",
+			"item": [
+				{
+					"name": "[GET] List EnumerationSet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets",
+								""
+							]
+						},
+						"description": "List of EnumerarionSets"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get enumerationSet values by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets/1/enumerations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets",
+								"1",
+								"enumerations"
+							]
+						},
+						"description": "get enumerationSet's values by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get enumerationSet by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets",
+								"1"
+							]
+						},
+						"description": "get a single EnumerationSet by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search enumerationSet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets",
+								"search"
+							]
+						},
+						"description": "Search enumerarionSets by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create EnumerationSet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\": null,\n\t\"description\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets"
+							]
+						},
+						"description": "Create a new EnumerationSet"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update enumerationSet",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":9,\n\t\"code\": null,\n\t\"description\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets/9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets",
+								"9"
+							]
+						},
+						"description": "Update a single EnumerationSet by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update bulk enumerationSet",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\":9,\n\t\"code\": null,\n\t\"description\": null\n},\n{\n\t\"id\":10,\n\t\"code\": null,\n\t\"description\": null\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/enumerationSets/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"enumerationSets",
+								""
+							]
+						},
+						"description": "Update a set of enumerationSet at the same time"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personnel",
+			"item": [
+				{
+					"name": "PersonnelClasses",
+					"item": [
+						{
+							"name": "[GET] get personnelClasses by Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnel/1/personnelClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnel",
+										"1",
+										"personnelClasses"
+									]
+								},
+								"description": "Get the personnelClass of a given Personnel by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] get all personnelClasses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnelClasses/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnelClasses",
+										""
+									]
+								},
+								"description": "List all PersonnelClasses for a Personnel"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] get personnelClasses properties by Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnelClasses/3/properties",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnelClasses",
+										"3",
+										"properties"
+									]
+								},
+								"description": "get personnelClasses properties by Id"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] get personnel by personnelClasses Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnelClasses/3/personnel",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnelClasses",
+										"3",
+										"personnel"
+									]
+								},
+								"description": "get a list of all personnel by a given PersonnelClases Id"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create personnelClasses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"code\": null,\n\t\"description\": null,\n\t\"location\": null,\n\t\"hierarchyScope\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnelClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnelClasses"
+									]
+								},
+								"description": "Create a new personnelClasses"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk personnelClasses",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n\t\"id\":0,\n\t\"code\": null,\n\t\"description\": null,\n\t\"location\": null,\n\t\"hierarchyScope\": null\n}]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnelClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnelClasses"
+									]
+								},
+								"description": "Update a set of personnelClasses at the same time"
+							},
+							"response": []
+						},
+						{
+							"name": "[DEL] Delete personnelClasses",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnelClasses/4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnelClasses",
+										"4"
+									]
+								},
+								"description": "Delete a personnelClasses by ID"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[GET] get personnel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel"
+							]
+						},
+						"description": "List all the Personnel and its params"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get personnel by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel",
+								"1"
+							]
+						},
+						"description": "get certain personnel data by Id"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create personnel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\": null,\n\t\"description\": null,\n\t\"location\": null,\n\t\"hierarchyScope\":null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel"
+							]
+						},
+						"description": "Create a new Personnel record"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search personnel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\":\"codigo\",\n\t\"description\":\"Descripcion\",\n\t\"location\": null,\n\t\"hierarchyScope\":null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel",
+								"search"
+							]
+						},
+						"description": "Search personnel by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| code\t   | String\t|  F\t   |\n| decription\t   | String\t|  F\t   |\n| personnelClass | String\t|  F\t   |"
+					},
+					"response": [
+						{
+							"name": "search by code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"code\":\"codigo\",\n\t\"description\":\"Descripcion\",\n\t\"location\": null,\n\t\"hierarchyScope\":null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/personnel/search",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"personnel",
+										"search"
+									]
+								},
+								"description": "Search personnel by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| code\t   | String\t|  F\t   |\n| decription\t   | String\t|  F\t   |\n| personnelClass | String\t|  F\t   |"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true",
+									"name": "access-control-allow-credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "access-control-allow-headers",
+									"value": "Authorization, X-Requested-with,Accept,Content-Type",
+									"name": "access-control-allow-headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "access-control-allow-methods",
+									"value": "POST, GET,PUT, OPTIONS, DELETE, PATCH",
+									"name": "access-control-allow-methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "access-control-max-age",
+									"value": "3600",
+									"name": "access-control-max-age",
+									"description": "Indicates how long the results of a preflight request can be cached in seconds."
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"name": "cache-control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "content-type",
+									"value": "application/hal+json;charset=UTF-8",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 19:52:54 GMT",
+									"name": "date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "expires",
+									"value": "0",
+									"name": "expires",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"key": "pragma",
+									"value": "no-cache",
+									"name": "pragma",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000 ; includeSubDomains",
+									"name": "strict-transport-security",
+									"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+								},
+								{
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"name": "transfer-encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"key": "x-application-context",
+									"value": "application:8081",
+									"name": "x-application-context",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-authtoken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyIsImtpZCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyJ9.eyJhdWQiOiJodHRwczovL2xhYm1pbGFuZXMuY29tL2liaXNhLW1hbnVmYWN0dXJpbmctbG9jYWwiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MGE4YTJkYy1kZjI1LTQ1ZGUtOWNmNS0wMDkzNDRjYTczOGYvIiwiaWF0IjoxNTA4NTEzNTE5LCJuYmYiOjE1MDg1MTM1MTksImV4cCI6MTUwODUzNTQxOSwiYWNyIjoiMSIsImFpbyI6IlkyTmdZRGkyNHZLeHBKV2FlWHdoK3owYjE4eFk4bWdGUjEvY1pvZERxeFVpaEgzbFluMEEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiOTljMjI1MjctNjUwNS00ZTU0LTk2MTAtYTM0Y2I5YzM1MTU5IiwiYXBwaWRhY3IiOiIxIiwiZ3JvdXBzIjpbImI1OGIxOGQwLWFjYzMtNDcwOC1iMmZkLTlhZWIwMDEwMWE4YiJdLCJpcGFkZHIiOiIxODYuOTQuMjM1LjEwNyIsIm5hbWUiOiJBTEVYQU5ERVIgSkFSQU1JTExPIFFVSU5URVJPIiwib2lkIjoiMjIyNTA0MzgtYzBkMy00MDdkLThlODAtNjQzN2E0YjIxNWRmIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoiM3FRaUVCcURfYzhQcnNGSElyMUF1cEtiNG9KYTgwTHRuTVBMNUI0SlBiayIsInRpZCI6IjcwYThhMmRjLWRmMjUtNDVkZS05Y2Y1LTAwOTM0NGNhNzM4ZiIsInVuaXF1ZV9uYW1lIjoiYWxleGFuZGVyLmphcmFtaWxsb0BsYWJtaWxhbmVzLmNvbSIsInVwbiI6ImFsZXhhbmRlci5qYXJhbWlsbG9AbGFibWlsYW5lcy5jb20iLCJ2ZXIiOiIxLjAifQ.SYjbSE85-Zol4M6SQ7A1DizBGbjKhczvvxWmKF8idBndcZQlwYIYfa5g73kzoSxvZTWH5PCMl698jCeAPsLU8WCmDYb-aV5Htv8n2RlHgpGLyLizrifI1eW1z_7EOacir3QHEO8nDg-zvLqBn8JI0tj3WtAUixfjNNeo5joC3MN54ivgDHzXSTP4uwTLyfUETUDPhr_jcTUXr19CRSbWGqQKoS1qyKNoRLtSG7mGqBnoPONYkSstir0EW957gzFSJ65iIsb0KzRarKQqkxltRA6PiOho2t6z_64CjmfYJ1zjhHYOkmeIzh1UTt_Y1aLXlidxAikm_N5N5Hy22NU-mA",
+									"name": "x-authtoken",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"name": "x-content-type-options",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "DENY",
+									"name": "x-frame-options",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"name": "x-xss-protection",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n  \"_embedded\" : {\r\n    \"personnel\" : [ {\r\n      \"@UUID\" : \"112cd85c-602b-4646-963e-90c16ec76977\",\r\n      \"id\" : 3997,\r\n      \"code\" : \"codigo\",\r\n      \"description\" : \"esto es una descripcion\",\r\n      \"hierarchyScope\" : null,\r\n      \"_links\" : {\r\n        \"properties\" : {\r\n          \"href\" : \"https://localhost:8081/mes/personnel/3997/properties\"\r\n        },\r\n        \"personnelClasses\" : {\r\n          \"href\" : \"https://localhost:8081/mes/personnel/3997/personnelClasses\"\r\n        },\r\n        \"location\" : {\r\n          \"href\" : \"https://localhost:8081/mes/personnel/3997/location\"\r\n        }\r\n      }\r\n    } ]\r\n  },\r\n  \"_links\" : {\r\n    \"self\" : {\r\n      \"href\" : \"https://localhost:8081/mes/personnel/search?code=codigo\"\r\n    }\r\n  },\r\n  \"page\" : {\r\n    \"size\" : 20,\r\n    \"totalElements\" : 1,\r\n    \"totalPages\" : 1,\r\n    \"number\" : 0\r\n  }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "[PUT] Update a single personnel by Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":3997,\n\t\"code\": null,\n\t\"description\": null,\n\t\"location\": null,\n\t\"hierarchyScope\":null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel/3997",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel",
+								"3997"
+							]
+						},
+						"description": "Update a single personnel by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update bulk personnel",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 3997,\n    \"code\": null,\n    \"description\": null,\n    \"location\": null,\n    \"hierarchyScope\": null\n  },\n  {\n    \"id\": 3996,\n    \"code\": null,\n    \"description\": null,\n    \"location\": null,\n    \"hierarchyScope\": null\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel"
+							]
+						},
+						"description": "Update a set of personnel at the same time given a Json"
+					},
+					"response": []
+				},
+				{
+					"name": "[DEL] Delete personnel",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel/3997/personnelClasses/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel",
+								"3997",
+								"personnelClasses",
+								"3"
+							]
+						},
+						"description": "Delete personnel by ID and personnelClasses ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Milanes",
+			"item": [
+				{
+					"name": "Rules",
+					"item": [
+						{
+							"name": "[GET]  get processDays",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/milanes/rules/scheduledProduction",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"milanes",
+										"rules",
+										"scheduledProduction"
+									]
+								},
+								"description": "Get processDays of a production process given the rule"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  get materialDefinitionWorkMaster",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/milanes/rules/materialDefinitionWorkMaster",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"milanes",
+										"rules",
+										"materialDefinitionWorkMaster"
+									]
+								},
+								"description": "list all the workMaster of MaterialDefinitions"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  clone workDirective",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/milanes/rules/cloneWorkDirective?workDirectiveId=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"milanes",
+										"rules",
+										"cloneWorkDirective"
+									],
+									"query": [
+										{
+											"key": "workDirectiveId",
+											"value": "2"
+										}
+									]
+								},
+								"description": "Clone or duplicate a workDirective by id"
+							},
+							"response": []
+						},
+						{
+							"name": "[PATCH]  Update workdirective by reentry",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"reentry\": null\n}"
+								},
+								"url": {
+									"raw": "{{url}}/milanes/rules/reentry",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"milanes",
+										"rules",
+										"reentry"
+									]
+								},
+								"description": "Update the variable reentry  from a specific workdirective "
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Integration",
+					"item": [
+						{
+							"name": "[GET]  get SIESA information",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/milanes/integration/siesa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"milanes",
+										"integration",
+										"siesa"
+									]
+								},
+								"description": "Obtiene la información de Siesa para la integración entre Milanes y Manufacturing y la data de los procesos en ejecución como:\n\n- id workRequest\n- hierarchyScope\n- customer\n- patient\n- startTime\n- endTime,\n- status\n- workType\n- processingType"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[GET] Upload equipments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/milanes/upload/equipments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"upload",
+								"equipments"
+							]
+						},
+						"description": "get the equipmen data configured for Milanes"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get dispatchCity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/milanes/upload/dispatchCity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"upload",
+								"dispatchCity"
+							]
+						},
+						"description": "get dispatchCity"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] create material properties",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/milanes/upload/material/properties",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"upload",
+								"material",
+								"properties"
+							]
+						},
+						"description": "upload material properties given a text file"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] end Process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/milanes/upload/endProcess",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"upload",
+								"endProcess"
+							]
+						},
+						"description": "given a text file"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] upload customers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/milanes/upload/customers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"upload",
+								"customers"
+							]
+						},
+						"description": "Upload list of customers given a text file"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search workdirectives",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/milanes/query/workDirectives",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"query",
+								"workDirectives"
+							]
+						},
+						"description": "Search Milanes's workDirectives by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| jobOrder\t   | Long\t|  F\t   |\n| workRequest | Long\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| customer | String\t|  F\t   |\n| patient | String\t|  F\t   |\n| hasWorkflow | Boolean\t|  F\t   |"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search jobOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/milanes/query/jobOrders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"milanes",
+								"query",
+								"jobOrders"
+							]
+						},
+						"description": "Search Milanes's jobOrders by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| workRequest\t   | Long\t|  F\t   |\n| hierarchyScope\t   | String\t|  F\t   |\n| customer | String\t|  F\t   |\n| patient | String\t|  F\t   |\n| startTime | Date\t|  F\t   |\n| endTime | Date\t|  F\t   |\n| status | String\t|  F\t   |\n| workType | String\t|  F\t   |\n| processingType | String\t|  F\t   |"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkDirective",
+			"item": [
+				{
+					"name": "[GET] list workDirectives",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\":29,\n\t\"code\":\"Esto es un codigo\",\n\t\"description\": \"Esto es una descripcion actualizada\",\n\t\"workType\": \"PRODUCTION\",\n\t\"hierarchyScope\": {\"id\": 55},\n\t\"workflowSpecificationId\": \"workflowId\"\n},\n{\n\t\"id\":28,\n\t\"code\":\"Esto es un codigo\",\n\t\"description\": \"Esto es una descripcion actualizada\",\n\t\"workType\": \"PRODUCTION\",\n\t\"hierarchyScope\": {\"id\": 55},\n\t\"workflowSpecificationId\": \"workflowId\"\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives"
+							]
+						},
+						"description": "get a List of all workDirectives"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get WorkDirective by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1"
+							]
+						},
+						"description": "Get WorkDirective by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get workDirective Parameters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1/parameters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1",
+								"parameters"
+							]
+						},
+						"description": "list the parameters of a workDirective by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get workDirective parent by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1/parent",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1",
+								"parent"
+							]
+						},
+						"description": "get a parent workDirective by workDirective id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get jobOrder by workDirective id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1/jobOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1",
+								"jobOrder"
+							]
+						},
+						"description": "get a job Order by worDirective id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get materialSpecification by workDirective id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1/materialSpecifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1",
+								"materialSpecifications"
+							]
+						},
+						"description": "List materialSpecification by workDirective id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get hierarchyScope by workDirective id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1/hierarchyScope",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1",
+								"hierarchyScope"
+							]
+						},
+						"description": "get hierarchyScope by workDirective id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get workMaster by workDirective id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/1/workMaster",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"1",
+								"workMaster"
+							]
+						},
+						"description": "get workMaster by workDirective id"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create workDirective",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"workMaster\": {\n\t\t\"id\": null\n\t},\n\t\"description\": \"\",\n\t\"workType\": null,\n\t\"hierarchyScope\": {\n\t\t\"id\": null\n\t},\n\t\"parameters\": [\n\t\t{\n\t\t\t\"code\": null,\n\t\t\t\"value\": null,\n\t\t\t\"parameters\": []\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives"
+							]
+						},
+						"description": "Create a new WorkDirective"
+					},
+					"response": [
+						{
+							"name": "Create WorkDirective",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": null,\n\t\"workMaster\": {\n\t\t\"id\": null\n\t},\n\t\"description\": \"\",\n\t\"workType\": null,\n\t\"hierarchyScope\": {\n\t\t\"id\": null\n\t},\n\t\"parameters\": [\n\t\t{\n\t\t\t\"code\": null,\n\t\t\t\"value\": null,\n\t\t\t\"parameters\": []\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/workDirectives",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"workDirectives"
+									]
+								},
+								"description": "Create a new WorkDirective"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[PUT] Update single workDirective by Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"workMaster\": {\n\t\t\"id\": null\n\t},\n\t\"description\": \"\",\n\t\"workType\": null,\n\t\"hierarchyScope\": {\n\t\t\"id\": null\n\t},\n\t\"parameters\": [\n\t\t{\n\t\t\t\"code\": null,\n\t\t\t\"value\": null,\n\t\t\t\"parameters\": []\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/{id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"{id}"
+							]
+						},
+						"description": "update a single WorkDirective by Id"
+					},
+					"response": [
+						{
+							"name": "Update a workDirective with Id 5",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": null,\n\t\"workMaster\": {\n\t\t\"id\": null\n\t},\n\t\"description\": \"\",\n\t\"workType\": null,\n\t\"hierarchyScope\": {\n\t\t\"id\": null\n\t},\n\t\"parameters\": [\n\t\t{\n\t\t\t\"code\": null,\n\t\t\t\"value\": null,\n\t\t\t\"parameters\": []\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/workDirectives/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"workDirectives",
+										"{id}"
+									]
+								},
+								"description": "update a single WorkDirective by Id"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[PUT] Update bulk workDirective",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\": null,\n\t\"workMaster\": {\n\t\t\"id\": null\n\t},\n\t\"description\": \"\",\n\t\"workType\": null,\n\t\"hierarchyScope\": {\n\t\t\"id\": null\n\t},\n\t\"parameters\": [\n\t\t{\n\t\t\t\"code\": null,\n\t\t\t\"value\": null,\n\t\t\t\"parameters\": []\n\t\t}\n\t]\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives"
+							]
+						},
+						"description": "update a set of workDirectives at the same time"
+					},
+					"response": []
+				},
+				{
+					"name": "[PATCH] Update workDirective description",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"description\": null\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/6/description",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"6",
+								"description"
+							]
+						},
+						"description": "update workDirectives description by id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity",
+			"item": [
+				{
+					"name": "Microsoft Login New Api Graph manufacturing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var json = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"bearerToken\", json.access_token);\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{clientId}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{clientSecret}}",
+									"type": "text"
+								},
+								{
+									"key": "resource",
+									"value": "{{resource}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://login.microsoftonline.com/{{tenantId}}/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"login",
+								"microsoftonline",
+								"com"
+							],
+							"path": [
+								"{{tenantId}}",
+								"oauth2",
+								"token"
+							]
+						},
+						"description": "Login Universal para Azure AD"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] list users identity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"users"
+							]
+						},
+						"description": "List all the identities of the users"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] list users identity by code",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/users?code=C000001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"users"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "C000001"
+								}
+							]
+						},
+						"description": "List all the identities of the users"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] list groups identity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/groups",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"groups"
+							]
+						},
+						"description": "List all groups available for the users"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] user properties by user Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/user/{objectId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"user",
+								"{objectId}"
+							]
+						},
+						"description": "get the user properties by its id"
+					},
+					"response": [
+						{
+							"name": "Get a tenant by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/identity/user/3e54b2b9-efbf-49f3-a877-626aef3c768e",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"identity",
+										"user",
+										"3e54b2b9-efbf-49f3-a877-626aef3c768e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[GET] group properties by group Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/group/{objectId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"group",
+								"{objectId}"
+							]
+						},
+						"description": "get the group properties by its id"
+					},
+					"response": [
+						{
+							"name": "get group by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyIsImtpZCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyJ9.eyJhdWQiOiJodHRwczovL2xhYm1pbGFuZXMuY29tL2liaXNhLW1hbnVmYWN0dXJpbmctbG9jYWwiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MGE4YTJkYy1kZjI1LTQ1ZGUtOWNmNS0wMDkzNDRjYTczOGYvIiwiaWF0IjoxNTA4NDc0MzA2LCJuYmYiOjE1MDg0NzQzMDYsImV4cCI6MTUwODQ5NjIwNiwiYWNyIjoiMSIsImFpbyI6IlkyTmdZSmcycXkzMTBNOG1ZWU5zTGxZYnVld2ZsVUcxMzJiNmlINyt2OFR1c3lhTFdRc0EiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiOTljMjI1MjctNjUwNS00ZTU0LTk2MTAtYTM0Y2I5YzM1MTU5IiwiYXBwaWRhY3IiOiIxIiwiZ3JvdXBzIjpbImI1OGIxOGQwLWFjYzMtNDcwOC1iMmZkLTlhZWIwMDEwMWE4YiJdLCJpcGFkZHIiOiIyMDAuOC42My44OCIsIm5hbWUiOiJBTEVYQU5ERVIgSkFSQU1JTExPIFFVSU5URVJPIiwib2lkIjoiMjIyNTA0MzgtYzBkMy00MDdkLThlODAtNjQzN2E0YjIxNWRmIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoiM3FRaUVCcURfYzhQcnNGSElyMUF1cEtiNG9KYTgwTHRuTVBMNUI0SlBiayIsInRpZCI6IjcwYThhMmRjLWRmMjUtNDVkZS05Y2Y1LTAwOTM0NGNhNzM4ZiIsInVuaXF1ZV9uYW1lIjoiYWxleGFuZGVyLmphcmFtaWxsb0BsYWJtaWxhbmVzLmNvbSIsInVwbiI6ImFsZXhhbmRlci5qYXJhbWlsbG9AbGFibWlsYW5lcy5jb20iLCJ2ZXIiOiIxLjAifQ.htJIzoLHN4ofX1jdeVYaFX5EQhntp8bEDXMRw-aiLNiQl11pt-J_KOcLAmjhNawr1qwgcCgnNLFhAE6kG8l67YD5llUCMQkfyb7Lwpdv6GCz6ovTGvmPu_fZaoo7WxX7rXiS0tmhdaRtC4oA8V3e702BSezRFqATI4yjGsb_XBMcE_rVNSSE5KQ0HODaeMk1AT_jfYmx1KLKOaiwHqi0DbutW_P1q1nx1EjjRI5araVO28HkmeXMxMQLpI-s8LBm4LXRatf9Gy5FyaM2dUNrWscWGhe42kzPLw-uiJHzpgBXcFqsFQtuvJ6dY_VbHfUvx_zlHLTjKvo2s8WOe-K5Ng"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/identity/group/0ae27fed-034b-499b-b3f4-d76bf1db7dc3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"identity",
+										"group",
+										"0ae27fed-034b-499b-b3f4-d76bf1db7dc3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[GET] get group members",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/group/{objectId}/members",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"group",
+								"{objectId}",
+								"members"
+							]
+						},
+						"description": "Get the group members (users) by group id"
+					},
+					"response": [
+						{
+							"name": "get group members",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/identity/group/0ae27fed-034b-499b-b3f4-d76bf1db7dc3/members",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"identity",
+										"group",
+										"0ae27fed-034b-499b-b3f4-d76bf1db7dc3",
+										"members"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[GET] get group of a user by user Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/identity/user/{objectId}/memberOf",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"identity",
+								"user",
+								"{objectId}",
+								"memberOf"
+							]
+						},
+						"description": "get groups asociates with a user by user Id"
+					},
+					"response": [
+						{
+							"name": "get group of a user by user Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/identity/user/af660487-5940-44ce-bf96-15a914f22697/memberOf",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"identity",
+										"user",
+										"af660487-5940-44ce-bf96-15a914f22697",
+										"memberOf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "workMaster",
+			"item": [
+				{
+					"name": "[GET] List workMasters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workMasters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workMasters"
+							]
+						},
+						"description": "get a List of workMasters"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create workMaster",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\": null,\n\t\"description\": null,\n\t\"workType\": null,\n\t\"hierarchyScope\": {\"id\": null},\n\t\"workflowSpecificationId\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workMasters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workMasters"
+							]
+						},
+						"description": "Create a WorkMaster\n\n**workTypes** values may be:\n- PRODUCTION,\n- MAINTENANCE, \n- QUALITY,\n- INVENTORY,\n- INVENTORY_INBOUND,\n- INVENTORY_OUTBOUND,\n- MIXED"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update workMaster by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"code\": null,\n\t\"description\": null,\n\t\"workType\": null,\n\t\"hierarchyScope\": {\"id\": null},\n\t\"workflowSpecificationId\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workMasters/29",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workMasters",
+								"29"
+							]
+						},
+						"description": "Update a singler WorkMaster by ID\n\n+**workTypes** values may be:\n- PRODUCTION,\n- MAINTENANCE, \n- QUALITY,\n- INVENTORY,\n- INVENTORY_INBOUND,\n- INVENTORY_OUTBOUND,\n- MIXED"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update bulk workMaster",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\":null,\n\t\"code\":null,\n\t\"description\": null,\n\t\"workType\": null,\n\t\"hierarchyScope\": {\"id\": null},\n\t\"workflowSpecificationId\": null\n},\n{\n\t\"id\":null,\n\t\"code\":null,\n\t\"description\": null,\n\t\"workType\": null,\n\t\"hierarchyScope\": {\"id\": null},\n\t\"workflowSpecificationId\": null\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workMasters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workMasters"
+							]
+						},
+						"description": "Update a set of WorkMaster at the same time\n\n**workTypes** values may be:\n- PRODUCTION,\n- MAINTENANCE, \n- QUALITY,\n- INVENTORY,\n- INVENTORY_INBOUND,\n- INVENTORY_OUTBOUND,\n- MIXED"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobOrders",
+			"item": [
+				{
+					"name": "[GET] get all jobOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/jobOrders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"jobOrders"
+							]
+						},
+						"description": "list all JobOrders"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create jobOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"description\": null,\n  \"hierarchyScope\": null,\n  \"workType\": null,\n  \"workMasterVersion\": null,\n  \"startTime\": null,\n  \"endTime\": null,\n  \"priority\": null,\n  \"command\": null,\n  \"commandRule\": null,\n  \"dispatchStatus\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/jobOrders/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"jobOrders",
+								""
+							]
+						},
+						"description": "Create a new JobOrder"
+					},
+					"response": [
+						{
+							"name": "Create complex jobOrder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"location\": {\"id\": 1},\n  \"tenantId\": 1,\n  \"parent\": null,\n  \"priority\": \"HIGH\",\n  \"jobOrders\": [\n    {\n      \"description\": \"Generar descripción\",\n      \"dispatchStatus\": null,\n      \"location\": {\"id\": 1},\n      \"workType\": \"PRODUCTION\",\n      \"hierarchyScope\": \"PRODUCTION\",\n      \"workMaster\": {\"id\": 1},\n      \"startTime\": null,\n      \"endTime\": null,\n      \"tenantId\": 1,\n      \"parameters\": [],\n      \"materialRequirements\": []\n    }\n  ],\n  \"workRequests\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/jobOrders/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"jobOrders",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Authorization, X-Requested-with,Accept,Content-Type",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET,PUT, OPTIONS, DELETE, PATCH",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600",
+									"name": "Access-Control-Max-Age",
+									"description": ""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/hal+json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2017 21:23:45 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Expires",
+									"value": "0",
+									"name": "Expires",
+									"description": ""
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache",
+									"name": "Pragma",
+									"description": ""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains",
+									"name": "Strict-Transport-Security",
+									"description": ""
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": ""
+								},
+								{
+									"key": "X-Application-Context",
+									"value": "application:8081",
+									"name": "X-Application-Context",
+									"description": ""
+								},
+								{
+									"key": "X-AuthToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyIsImtpZCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyJ9.eyJhdWQiOiJodHRwczovL2xhYm1pbGFuZXMuY29tL2liaXNhLW1hbnVmYWN0dXJpbmctbG9jYWwiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83MGE4YTJkYy1kZjI1LTQ1ZGUtOWNmNS0wMDkzNDRjYTczOGYvIiwiaWF0IjoxNTA4OTYyOTc3LCJuYmYiOjE1MDg5NjI5NzcsImV4cCI6MTUwODk4NDg3NywiYWNyIjoiMSIsImFpbyI6IlkyTmdZUERoS1hsZktSSi8ybHVrV1RMU1RHWDM2clJQRjhKbEM4cmY2MStkL3BIbFR6TUEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiOTljMjI1MjctNjUwNS00ZTU0LTk2MTAtYTM0Y2I5YzM1MTU5IiwiYXBwaWRhY3IiOiIxIiwiZmFtaWx5X25hbWUiOiJMw7NwZXoiLCJnaXZlbl9uYW1lIjoiQWxleGFuZGVyIiwiZ3JvdXBzIjpbImI1OGIxOGQwLWFjYzMtNDcwOC1iMmZkLTlhZWIwMDEwMWE4YiJdLCJpcGFkZHIiOiIxODYuOTMuMjguMTE5IiwibmFtZSI6IkFsZXhhbmRlciBMw7NwZXoiLCJvaWQiOiIzOGQxMjczYi1kMGM4LTRhOGUtYmU4Mi1jMzgwYzk5YWFiNjciLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJzQUY4STNWSnA0SVN0WG54QjNZV1JERnc0TncwMVN5SWJJYmZqZGZEeDZvIiwidGlkIjoiNzBhOGEyZGMtZGYyNS00NWRlLTljZjUtMDA5MzQ0Y2E3MzhmIiwidW5pcXVlX25hbWUiOiJhbGV4QGxhYm1pbGFuZXMuY29tIiwidXBuIjoiYWxleEBsYWJtaWxhbmVzLmNvbSIsInZlciI6IjEuMCJ9.lErJXFfw6S925Es0auM_FGDQUdbYRl_J7kBJcf6JTDZ1Tr9_75wlo8eRcIoA_k1a_W11AJ07OVhQGdYIoJy--D2l4QXfvVtwJNkJpUi_aTvz12hmGT1MecEuZhYIl32X8FtaVl8SxUQ482yIYOYBfDdgg21Femt-n8fLiV6YVdI04yXENLrtAeJTsLHYbRqxuqG8Jy43WOmJB7jvF4iGdiWoXvmE3YZFKEArE7sKB2bOKlLjLpG2URKASSRt5EKJEGVh5DG54EXU3snKkTrp90GUSAJkylEafZDsK0wNp8a4Aeeow0dP32axZyzDqQp5S9OPqLTRl7MqYGXNQGqCNQ",
+									"name": "X-AuthToken",
+									"description": ""
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": ""
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY",
+									"name": "X-Frame-Options",
+									"description": ""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": ""
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"httpOnly": true,
+									"domain": "localhost",
+									"path": "/",
+									"secure": true,
+									"value": "E90247289C8273FFAA114027584D235F",
+									"key": "JSESSIONID"
+								}
+							],
+							"body": "{\r\n  \"@UUID\" : \"7ca358d3-b30a-48b0-aeec-503c70194628\",\r\n  \"id\" : 15,\r\n  \"code\" : null,\r\n  \"description\" : \"Prueba\",\r\n  \"hierarchyScope\" : \"PRODUCTION\",\r\n  \"workType\" : \"PRODUCTION\",\r\n  \"workMasterVersion\" : null,\r\n  \"startTime\" : \"2017-10-26T11:00:00.000+0000\",\r\n  \"endTime\" : \"2017-10-31T16:00:00.000+0000\",\r\n  \"priority\" : null,\r\n  \"command\" : null,\r\n  \"commandRule\" : null,\r\n  \"dispatchStatus\" : \"DISPATCHED\",\r\n  \"_links\" : {\r\n    \"parameters\" : {\r\n      \"href\" : \"https://localhost:8081/mes/jobOrders/15/parameters\"\r\n    },\r\n    \"materialRequirements\" : {\r\n      \"href\" : \"https://localhost:8081/mes/jobOrders/15/materialRequirements\"\r\n    },\r\n    \"workRequest\" : {\r\n      \"href\" : \"https://localhost:8081/mes/jobOrders/15/workRequest\"\r\n    },\r\n    \"workMaster\" : {\r\n      \"href\" : \"https://localhost:8081/mes/jobOrders/15/workMaster\"\r\n    },\r\n    \"jobOrderList\" : {\r\n      \"href\" : \"https://localhost:8081/mes/jobOrders/15/jobOrderList\"\r\n    },\r\n    \"location\" : {\r\n      \"href\" : \"https://localhost:8081/mes/jobOrders/15/location\"\r\n    }\r\n  }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "[PUT] update a jobOrder",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n    \"code\": null,\n    \"description\": null,\n    \"hierarchyScope\": null,\n    \"workType\": null,\n    \"workMasterVersion\": null,\n    \"startTime\": null,\n    \"endTime\": null,\n    \"priority\": null,\n    \"command\": null,\n    \"commandRule\": null,\n    \"dispatchStatus\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/jobOrder/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"jobOrder",
+								""
+							]
+						},
+						"description": "Update a jobOrder"
+					},
+					"response": []
+				},
+				{
+					"name": "[DEL] Delete jobOrder by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/mes/jobOrders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"mes",
+								"jobOrders",
+								"1"
+							]
+						},
+						"description": "Delete a JobOrder by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search JobOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\":29,\n\t\"code\":\"Esto es un codigo\",\n\t\"description\": \"Esto es una descripcion actualizada\",\n\t\"workType\": \"PRODUCTION\",\n\t\"hierarchyScope\": {\"id\": 55},\n\t\"workflowSpecificationId\": \"workflowId\"\n},\n{\n\t\"id\":28,\n\t\"code\":\"Esto es un codigo\",\n\t\"description\": \"Esto es una descripcion actualizada\",\n\t\"workType\": \"PRODUCTION\",\n\t\"hierarchyScope\": {\"id\": 55},\n\t\"workflowSpecificationId\": \"workflowId\"\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/jobOrderLists/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"jobOrderLists",
+								"search"
+							]
+						},
+						"description": "Search jobOrders by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| startTime | Date\t|  F\t   |\n| endTime | Date\t|  F\t   |\n| workType | String\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | String\t|  F\t   |\n\nwhere **workTypes** may have the following values:\n- PRODUCTION,\n- MAINTENANCE, \n- QUALITY,\n- INVENTORY,\n- INVENTORY_INBOUND,\n- INVENTORY_OUTBOUND,\n- MIXED"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "workRequest",
+			"item": [
+				{
+					"name": "[GET] get all workRequest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workRequests/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workRequests",
+								""
+							]
+						},
+						"description": "List all workRequest available"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get  workRequest hierarchy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workRequests/2/hierarchy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workRequests",
+								"2",
+								"hierarchy"
+							]
+						},
+						"description": "get workRequest hierarchy by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Searh workRequest by Params",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/workRequests/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workRequests",
+								"search"
+							]
+						},
+						"description": "Search workRequests by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| startTime | Date\t|  F\t   |\n| endTime | Date\t|  F\t   |\n| workType | Enum\t|  F\t   |\n| priority | Enum\t|  F\t   |\n| workSchedule | Long\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | String\t|  F\t   |\n\nwhere **workTypes** may have the following values:\n- PRODUCTION,\n- MAINTENANCE, \n- QUALITY,\n- INVENTORY,\n- INVENTORY_INBOUND,\n- INVENTORY_OUTBOUND,\n- MIXED\n\nand **priority** may be:\n- HIGH,\n- MEDIUM,\n- LOW"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create workRequest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"location\": {\n\t\t\"id\": null\n\t},\n\t\"tenantId\": null,\n\t\"parent\": null,\n\t\"priority\": \"null\",\n\t\"jobOrders\": [\n\t\t{\n\t\t\t\"description\": null,\n\t\t\t\"dispatchStatus\": null,\n\t\t\t\"location\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"workType\": null,\n\t\t\t\"hierarchyScope\": null,\n\t\t\t\"workMaster\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"startTime\": null,\n\t\t\t\"endTime\": null,\n\t\t\t\"tenantId\": 1,\n\t\t\t\"parameters\": [],\n\t\t\t\"materialRequirements\": []\n\t\t}\n\t],\n\t\"workRequests\": []\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workRequests",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workRequests"
+							]
+						},
+						"description": "Create a new workRequest"
+					},
+					"response": [
+						{
+							"name": "Create workRequest",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": null,\n\t\"location\": {\n\t\t\"id\": null\n\t},\n\t\"tenantId\": null,\n\t\"parent\": null,\n\t\"priority\": \"null\",\n\t\"jobOrders\": [\n\t\t{\n\t\t\t\"description\": null,\n\t\t\t\"dispatchStatus\": null,\n\t\t\t\"location\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"workType\": null,\n\t\t\t\"hierarchyScope\": null,\n\t\t\t\"workMaster\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"startTime\": null,\n\t\t\t\"endTime\": null,\n\t\t\t\"tenantId\": 1,\n\t\t\t\"parameters\": [],\n\t\t\t\"materialRequirements\": []\n\t\t}\n\t],\n\t\"workRequests\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/workRequests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"workRequests"
+									]
+								},
+								"description": "Create a new workRequest"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true",
+									"name": "access-control-allow-credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "access-control-allow-headers",
+									"value": "Authorization, X-Requested-with,Accept,Content-Type",
+									"name": "access-control-allow-headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "access-control-allow-methods",
+									"value": "POST, GET,PUT, OPTIONS, DELETE, PATCH",
+									"name": "access-control-allow-methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "access-control-max-age",
+									"value": "3600",
+									"name": "access-control-max-age",
+									"description": "Indicates how long the results of a preflight request can be cached in seconds."
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"name": "cache-control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 22:06:05 GMT",
+									"name": "date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "expires",
+									"value": "0",
+									"name": "expires",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"key": "pragma",
+									"value": "no-cache",
+									"name": "pragma",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000 ; includeSubDomains",
+									"name": "strict-transport-security",
+									"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+								},
+								{
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"name": "transfer-encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"name": "x-content-type-options",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "DENY",
+									"name": "x-frame-options",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"name": "x-xss-protection",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"body": "{\"timestamp\":1508537165420,\"status\":403,\"error\":\"Forbidden\",\"message\":\"Access Denied\",\"path\":\"/mes/workRequests\"}"
+						}
+					]
+				},
+				{
+					"name": "[POST] Update single workRequest by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"location\": {\n\t\t\"id\": null\n\t},\n\t\"tenantId\": null,\n\t\"parent\": null,\n\t\"priority\": \"null\",\n\t\"jobOrders\": [\n\t\t{\n\t\t\t\"description\": null,\n\t\t\t\"dispatchStatus\": null,\n\t\t\t\"location\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"workType\": null,\n\t\t\t\"hierarchyScope\": null,\n\t\t\t\"workMaster\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"startTime\": null,\n\t\t\t\"endTime\": null,\n\t\t\t\"tenantId\": 1,\n\t\t\t\"parameters\": [],\n\t\t\t\"materialRequirements\": []\n\t\t}\n\t],\n\t\"workRequests\": []\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workRequests/{id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workRequests",
+								"{id}"
+							]
+						},
+						"description": "Update a single workRequest by ID"
+					},
+					"response": [
+						{
+							"name": "Update single workRequest with id 9",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": null,\n\t\"location\": {\n\t\t\"id\": null\n\t},\n\t\"tenantId\": null,\n\t\"parent\": null,\n\t\"priority\": \"null\",\n\t\"jobOrders\": [\n\t\t{\n\t\t\t\"description\": null,\n\t\t\t\"dispatchStatus\": null,\n\t\t\t\"location\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"workType\": null,\n\t\t\t\"hierarchyScope\": null,\n\t\t\t\"workMaster\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"startTime\": null,\n\t\t\t\"endTime\": null,\n\t\t\t\"tenantId\": 1,\n\t\t\t\"parameters\": [],\n\t\t\t\"materialRequirements\": []\n\t\t}\n\t],\n\t\"workRequests\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/workRequests/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"workRequests",
+										"{id}"
+									]
+								},
+								"description": "Update a single workRequest by ID"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "[POST] Update bulk workRequest",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\": null,\n\t\"location\": {\n\t\t\"id\": null\n\t},\n\t\"tenantId\": null,\n\t\"parent\": null,\n\t\"priority\": \"null\",\n\t\"jobOrders\": [\n\t\t{\n\t\t\t\"description\": null,\n\t\t\t\"dispatchStatus\": null,\n\t\t\t\"location\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"workType\": null,\n\t\t\t\"hierarchyScope\": null,\n\t\t\t\"workMaster\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"startTime\": null,\n\t\t\t\"endTime\": null,\n\t\t\t\"tenantId\": 1,\n\t\t\t\"parameters\": [],\n\t\t\t\"materialRequirements\": []\n\t\t}\n\t],\n\t\"workRequests\": []\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workRequests",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workRequests"
+							]
+						},
+						"description": "Update a set of workRequest at the same time"
+					},
+					"response": [
+						{
+							"name": "Update bulk workRequest",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n\t\"id\": null,\n\t\"location\": {\n\t\t\"id\": null\n\t},\n\t\"tenantId\": null,\n\t\"parent\": null,\n\t\"priority\": \"null\",\n\t\"jobOrders\": [\n\t\t{\n\t\t\t\"description\": null,\n\t\t\t\"dispatchStatus\": null,\n\t\t\t\"location\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"workType\": null,\n\t\t\t\"hierarchyScope\": null,\n\t\t\t\"workMaster\": {\n\t\t\t\t\"id\": null\n\t\t\t},\n\t\t\t\"startTime\": null,\n\t\t\t\"endTime\": null,\n\t\t\t\"tenantId\": 1,\n\t\t\t\"parameters\": [],\n\t\t\t\"materialRequirements\": []\n\t\t}\n\t],\n\t\"workRequests\": []\n}\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/workRequests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"workRequests"
+									]
+								},
+								"description": "Update a set of workRequest at the same time"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Material",
+			"item": [
+				{
+					"name": "materialClasses",
+					"item": [
+						{
+							"name": "[GET] get materialClasses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses"
+									]
+								},
+								"description": "Get all de material Classes "
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] Search materialClasses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses/search?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses",
+										"search"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Search materialClasses by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| assemblyRelationship | AssemblyRelationShip\t|  F\t   |\n| assemblyType | assemblyType\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | Long\t|  F\t   |\n\nwhere **AssemblyRelationShip** may have the following values:\n- OPTIONAL,\n- PERMANENT,\n- TRANSIENT\n\nand **assemblyType** may be:\n- OPTIONAL,\n- PHYSICAL,\n- LOGICAL"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create materialClasses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses"
+									]
+								},
+								"description": "Create a new materialClasses"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Update bulk materialClasses",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": null,\n    \"code\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialClassProperties\": []\n  },\n  {\n    \"id\": null,\n    \"code\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialClassProperties\": []\n  }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses"
+									]
+								},
+								"description": "Update a set of materialClasses at the same time"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Update single materialClasses",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses",
+										"{id}"
+									]
+								},
+								"description": "Update a single materialClasses by id"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  get materialClasses hierarchy by Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses/{id}/hierarchy",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses",
+										"{id}",
+										"hierarchy"
+									]
+								},
+								"description": "get hierarchy of a single materialClasses by id"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "materialDefinitions",
+					"item": [
+						{
+							"name": "[GET]  get all materialDefinitions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialDefinitions",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialDefinitions"
+									]
+								},
+								"description": "list all materialDefinitions"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  get model of materialDefinitions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialDefinitions/model",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialDefinitions",
+										"model"
+									]
+								},
+								"description": "list all the model that are parte of the materialDefinitions"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  Search materialDefinitions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialDefinitions/search?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialDefinitions",
+										"search"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Search materialDefinitions by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| assemblyRelationship | AssemblyRelationShip\t|  F\t   |\n| assemblyType | assemblyType\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | Long\t|  F\t   |\n\nwhere **AssemblyRelationShip** may have the following values:\n- OPTIONAL,\n- PERMANENT,\n- TRANSIENT\n\nand **assemblyType** may be:\n- OPTIONAL,\n- PHYSICAL,\n- LOGICAL"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update single materialDefinitions",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialDefinitionProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses",
+										"{id}"
+									]
+								},
+								"description": "Update a single materialDefinitions by Id"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk materialDefinitions",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": null,\n    \"code\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialDefinitionProperties\": []\n  },\n  {\n    \"id\": null,\n    \"code\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialDefinitionProperties\": []\n  }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses"
+									]
+								},
+								"description": "Update a set of materialDefinitions at the same time"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create materialDefinitions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialDefinitionProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses"
+									]
+								},
+								"description": "Create a new materialDefinitions"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "materialLot",
+					"item": [
+						{
+							"name": "[GET]  get all materialLots",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialLots",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialLots"
+									]
+								},
+								"description": "list all material lots"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  Search materialLots",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialLots/search?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialLots",
+										"search"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Search materialLots by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| assemblyRelationship | AssemblyRelationShip\t|  F\t   |\n| assemblyType | assemblyType\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| quantity | Float\t|  F\t   |\n| status | MaterialLotStatus\t|  F\t   |\n| unitOfMeasure | String\t|  F\t   |\n| quantity | Float\t|  F\t   |\n| materialDefinition | Long\t|  F\t   |\n| storageLocation | Long\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | Long\t|  F\t   |\n\n\nwhere **AssemblyRelationShip** may have the following values:\n- OPTIONAL,\n- PERMANENT,\n- TRANSIENT\n\nand **assemblyType** may be:\n- OPTIONAL,\n- PHYSICAL,\n- LOGICAL\n- \nand **materialLotStatus** may be:\n- RELEASED,\n- APPROVED,\n- BLOCKED,\n- IN_PROCESS,\n- IN_QUALITY_CHECK"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create materialLots",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"description\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"materialDefinition\": null,\n  \"storageLocation\": null,\n  \"quantity\": null,\n  \"unitOfMeasure\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialLotProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses"
+									]
+								},
+								"description": "Create a new materialLots"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update single materialLots",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"description\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"materialDefinition\": null,\n  \"storageLocation\": null,\n  \"quantity\": null,\n  \"unitOfMeasure\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialLotProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses",
+										"{id}"
+									]
+								},
+								"description": "Update a single materialLots by Id"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk materialLots",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": null,\n    \"code\": null,\n    \"description\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"materialDefinition\": null,\n    \"storageLocation\": null,\n    \"quantity\": null,\n    \"unitOfMeasure\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialLotProperties\": []\n  },\n  {\n    \"id\": null,\n    \"code\": null,\n    \"description\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"materialDefinition\": null,\n    \"storageLocation\": null,\n    \"quantity\": null,\n    \"unitOfMeasure\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialLotProperties\": []\n  }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialClasses/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialClasses",
+										"{id}"
+									]
+								},
+								"description": "Update a set of materialLots at the same time"
+							},
+							"response": []
+						},
+						{
+							"name": "[PATCH] Update materialLot storage location",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": null,\n\t\"storageLocation\": null\n}\n"
+								},
+								"url": {
+									"raw": "{{url}}/mes/workDirectives/{id}/storageLocation",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"workDirectives",
+										"{id}",
+										"storageLocation"
+									]
+								},
+								"description": "update materialLots storage location by id"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "materialSubLot",
+					"item": [
+						{
+							"name": "[GET]  get all materialSubLots",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialSubLots",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialSubLots"
+									]
+								},
+								"description": "list all material sub lots"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  Search materialSubLots",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialLots/search?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialLots",
+										"search"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Search materialSubLots by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| assemblyRelationship | AssemblyRelationShip\t|  F\t   |\n| assemblyType | assemblyType\t|  F\t   |\n| quantity | Float\t|  F\t   |\n| status | MaterialLotStatus\t|  F\t   |\n| unitOfMeasure | String\t|  F\t   |\n| materialLot | Long\t|  F\t   |\n| storageLocation | Long\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | Long\t|  F\t   |\n\n\nwhere **AssemblyRelationShip** may have the following values:\n- OPTIONAL,\n- PERMANENT,\n- TRANSIENT\n\nand **assemblyType** may be:\n- OPTIONAL,\n- PHYSICAL,\n- LOGICAL"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Create materialSubLots",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"description\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"status\": null,\n  \"storageLocation\": null,\n  \"quantity\": null,\n  \"unitOfMeasure\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialLot\": null,\n  \"materialSubLot\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialSubLots",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialSubLots"
+									]
+								},
+								"description": "Create a new materialSubLots"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update single materialSubLots",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"description\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"status\": null,\n  \"storageLocation\": null,\n  \"quantity\": null,\n  \"unitOfMeasure\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialLot\": null,\n  \"materialSubLot\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialSubLots/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialSubLots",
+										"{id}"
+									]
+								},
+								"description": "Update a single materialSubLots by id"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT] Update bulk materialSubLots",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": null,\n    \"code\": null,\n    \"description\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"status\": null,\n    \"storageLocation\": null,\n    \"quantity\": null,\n    \"unitOfMeasure\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialLot\": null,\n    \"materialSubLot\": []\n  },\n  {\n    \"id\": null,\n    \"code\": null,\n    \"description\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"status\": null,\n    \"storageLocation\": null,\n    \"quantity\": null,\n    \"unitOfMeasure\": null,\n    \"assemblyType\": null,\n    \"assemblyRelationship\": null,\n    \"materialLot\": null,\n    \"materialSubLot\": []\n  }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialSubLots",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialSubLots"
+									]
+								},
+								"description": "Update a set of materialSubLots at the same time"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "materialTestSpecification",
+					"item": [
+						{
+							"name": "[GET]  get all materialTestSpecifications",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialTestSpecifications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialTestSpecifications"
+									]
+								},
+								"description": "list all material Test Specifications"
+							},
+							"response": []
+						},
+						{
+							"name": "[GET]  Search materialTestSpecifications",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"assemblyType\": null,\n  \"assemblyRelationship\": null,\n  \"materialClassProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialTestSpecifications/search?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialTestSpecifications",
+										"search"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Search materialTestSpecifications by any of its **parameters**:\n\n| Parameter| Type\t| Required |\n| ------- | ----\t| -------|\n| id\t   | Long\t|  F\t   |\n| code\t   | String\t|  F\t   |\n| description | String\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| name | String\t|  F\t   |\n| hierarchyScope | String\t|  F\t   |\n| location | Long\t|  F\t   |\n| version | String\t|  F\t   |\n"
+							},
+							"response": []
+						},
+						{
+							"name": "[POST]  Create new materialTestSpecifications",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"name\": null,\n  \"description\": null,\n  \"version\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"testedMaterialClassProperties\":[],\n  \"testedMaterialDefinitionProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialTestSpecifications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialTestSpecifications"
+									]
+								},
+								"description": "Creates a new material test specification"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT]  Update single materialTestSpecifications",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": null,\n  \"code\": null,\n  \"name\": null,\n  \"description\": null,\n  \"version\": null,\n  \"location\": null,\n  \"hierarchyScope\": null,\n  \"testedMaterialClassProperties\":[],\n  \"testedMaterialDefinitionProperties\": []\n}"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialTestSpecifications/{id}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialTestSpecifications",
+										"{id}"
+									]
+								},
+								"description": "Updates a single material test specification by Id"
+							},
+							"response": []
+						},
+						{
+							"name": "[PUT]  Update bulk materialTestSpecifications",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"id\": null,\n    \"code\": null,\n    \"name\": null,\n    \"description\": null,\n    \"version\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"testedMaterialClassProperties\": [],\n    \"testedMaterialDefinitionProperties\": []\n  },\n  {\n    \"id\": null,\n    \"code\": null,\n    \"name\": null,\n    \"description\": null,\n    \"version\": null,\n    \"location\": null,\n    \"hierarchyScope\": null,\n    \"testedMaterialClassProperties\": [],\n    \"testedMaterialDefinitionProperties\": []\n  }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/mes/materialTestSpecifications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mes",
+										"materialTestSpecifications"
+									]
+								},
+								"description": "Updates a set of material test specification at the same time"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Repository",
+			"item": [],
+			"description": "Some endpoints are not explicitly defined in this list but rather are contained in restRepository and are exposed automatically by it (mainly GET methods).\n\nFor example **personProperties** wich URL isn't defined above but exits and show the properties of a user/person:\n- {{url}}/mes/personProperties contained in *PersonPropertyRepository*\n\nHere's a list of the *restRepository* available\n\n| EndPoint| Repository\t|\n| ------- | ----\t|\n| EventDefinitionNotificationRecipients  | EventDefinitionNotificationRecipientRepository\t|\n| eventDefinitionProperties  | EventDefinitionPropertyRepository\t|\n| eventDefinitions  | EventDefinitionRepository\t|\n| eventProperties  | EventPropertyRepository\t|\n| events  | EventRepository\t|\n| eventTypes  | EventTypeRepository\t|\n| failures  | FailureRepository\t|\n| materialClasses  | MaterialClassRepository\t|\n| materialDefinitionProperties  | MaterialDefinitionPropertyRepository\t|\n| materialDefinitions  | MaterialDefinitionRepository\t|\n| materialLotProperties  | MaterialLotPropertyRepository\t|\n| materialLots  | MaterialLotRepository\t|\n| materialSubLotProperties  | MaterialSubLotPropertyRepository\t|\n| materialSubLots  | MaterialSubLotRepository\t|\n| materialTestSpecifications  | MaterialTestSpecificationRepository\t|\n| personnelClassProperties  | PersonnelClassPropertyRepository\t|\n| personnelClasses  | PersonnelClassRepository\t|\n| personnel  | PersonRepository\t|\n| qualificationTestResults  | QualificationTestResultRepository\t|\n| qualificationTestSpecifications  | QualificationTestSpecificationRepository\t|\n\n\n\n\n"
+		},
+		{
+			"name": "History WorkflowNodes",
+			"item": [
+				{
+					"name": "[GET] get Process History",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/history/processes/{processInstanceId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"history",
+								"processes",
+								"{processInstanceId}"
+							]
+						},
+						"description": "get Process History by processInstanceId"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get historic UserTask",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/history/userTasks/{taskId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"history",
+								"userTasks",
+								"{taskId}"
+							]
+						},
+						"description": "get get historic UserTask by taskId"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get historic Process Journal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/mes/history/processes/40200/journal",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"history",
+								"processes",
+								"40200",
+								"journal"
+							]
+						},
+						"description": "get historic Process Journal by processInstanceId?"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] get historyc Process with query Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"id\":null,\r\n  \"state\":null,\r\n  \"initiateTime\": null,\r\n  \"endTime\":null,\r\n  \"name\": \"Zirconio\",\r\n  \"variables\":[\r\n    {\r\n     \"name\": \"workRequestId\",\r\n     \"type\": \"STRING\",\r\n     \"value\": \"10\"\r\n    }\r\n   ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/history/processes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"history",
+								"processes"
+							]
+						},
+						"description": "get historyc Process with query Request"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] get historyc Task with query Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"state\":null,\r\n  \"processInstanceId\":null,\r\n  \"processDefinitionName\":null,\r\n  \"initiateTime\":\"2017-06-01T11:20:43Z\",\r\n  \"endTime\":\"2017-09-01T11:16:44Z\",\r\n  \"assignee\":null,\r\n  \"variables\":[\r\n  {\r\n     \"name\": \"jobOrderId\",\r\n     \"type\": \"STRING\",\r\n     \"value\": \"10\"\r\n    }\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/history/userTasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"history",
+								"userTasks"
+							]
+						},
+						"description": "get historyc Task with query Request"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] WorkflowNodes history",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": null,\n  \"state\": null,\n  \"initiateTime\": null,\n  \"endTime\": null,\n  \"processDefinitionName\": \"Barras\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workflowNodes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workflowNodes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flowable",
+			"item": [
+				{
+					"name": "[GET] get all process Instances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances"
+							]
+						},
+						"description": "get all process instances running"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get process Instance by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances/{id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances",
+								"{id}"
+							]
+						},
+						"description": "Get a single process instance by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get  variables of Process Instance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances/100938/variables",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances",
+								"100938",
+								"variables"
+							]
+						},
+						"description": "get all variables defined in a Process Instance by processInstanceId"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get active tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks"
+							]
+						},
+						"description": "Get a list of all active tasks running"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Completes a task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"action\": \"complete\",\n  \"variables\": []\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks/{id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks",
+								"{id}"
+							]
+						},
+						"description": "Complete a tasks by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Claim a task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"action\": \"claim\",\n  \"assignee\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks/{id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks",
+								"{id}"
+							]
+						},
+						"description": "Claim a task to a certain user by id. So that person become de owner of the task and that person can complete it"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Delegate task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\" : \"delegate\",\r\n  \"assignee\" : \"Fabian Vidal\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks/{taskId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks",
+								"{taskId}"
+							]
+						},
+						"description": "Delegate a task to someone else. So that other person becomes the new owner and the status change to delegated."
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get userTasks by owner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks?assignee=kermit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "assignee",
+									"value": "kermit"
+								}
+							]
+						},
+						"description": "get all usertasks by owner name"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get historic task instances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/history/historic-task-instances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"historic-task-instances"
+							]
+						},
+						"description": "List historic task"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create process instance by definitionId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"processDefinitionId\": null,\n  \"businessKey\": null,\n  \"variables\": []\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances"
+							]
+						},
+						"description": "Create a process instance by processDefinition ID"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create process intances by key",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"processDefinitionKey\": null,\r\n   \"variables\": [\r\n      {\r\n        \"name\": null,\r\n        \"value\": null,\r\n        \"type\": null,\r\n        \"scope\": null\r\n      }\r\n      \r\n   ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances"
+							]
+						},
+						"description": "Create a new Process Instance by Key "
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get process Instance. by Id and variables",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances?id=32596&includeProcessVariables=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "32596"
+								},
+								{
+									"key": "includeProcessVariables",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Get process instance by id including the process variables"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get process instance diagram",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances/187519/diagram",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances",
+								"187519",
+								"diagram"
+							]
+						},
+						"description": "Get process instance BPMN diagram"
+					},
+					"response": []
+				},
+				{
+					"name": "[DEL] Delete a process instance",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances/{id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances",
+								"{id}"
+							]
+						},
+						"description": "Delete a process intance by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get all task variables by taskId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\" : \"complete\",\r\n  \"variables\" : [\r\n    \r\n      \r\n  {\r\n    \"name\" : \"variable1\",\r\n  \"value\" : 50.1,\r\n  \"type\" : \"double\"\r\n}\r\n      \r\n    \r\n    \r\n    \r\n    \r\n    \r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks/{taskId}/variables",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks",
+								"{taskId}",
+								"variables"
+							]
+						},
+						"description": "Get all task variables from a task by taskId.\nIt can include a *\"scope\"* parameter. \n\n>- When none especified, returns all variables (local and global).\n>- ?scope=local returns only **local** variables\n>- ?scope=global returns only **global** variables"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Create Task Variables",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"name\" : null,\r\n    \"scope\" : null,\r\n    \"type\" : null,\r\n    \"value\" : null\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks/{taskId}}/variables",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks",
+								"{taskId}}",
+								"variables"
+							]
+						},
+						"description": "Create variables to a task by task Id\n\n- **scope** can be: local or global. When omitted, *global* is assumed\n- **type** can be: string, double, integer and boolean."
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] Update variable in a task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": null,\n  \"scope\": null,\n  \"type\": null,\n  \"value\": null\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks/{taskId}/variables/{variableName}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks",
+								"{taskId}",
+								"variables",
+								"{variableName}"
+							]
+						},
+						"description": "Update a variable from a task by taskId"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Query tasks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"start\": 0,\n  \"size\": 7,\n  \"sort\": \"createTime\",\n  \"processInstanceVariables\": [\n    {\n      \"name\": \"hierarchyScopeId\",\n      \"type\": \"long\",\n      \"value\": 7,\n      \"operation\": \"equals\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/query/tasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"query",
+								"tasks"
+							]
+						},
+						"description": "Search tasks by conditions met in the payload data, like variables"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Search all Historic process instances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/query/historic-process-instances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"query",
+								"historic-process-instances"
+							]
+						},
+						"description": "Get historinc process instances"
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Search Historic process instances by parameters",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order\": \"desc\",\n  \"start\": 0,\n  \"size\": 15,\n  \"variables\": [\n    {\n      \"name\": \"directiveWorkType\",\n      \"type\": \"string\",\n      \"value\": \"INVENTORY_INBOUND\",\n      \"operation\": \"equals\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/query/historic-process-instances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"query",
+								"historic-process-instances"
+							]
+						},
+						"description": "Query historinc process instances by parameters"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Get historic variable instances by parameters ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/history/historic-variable-instances/?param1=5086&=5086",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"historic-variable-instances",
+								""
+							],
+							"query": [
+								{
+									"key": "param1",
+									"value": "5086"
+								},
+								{
+									"key": "",
+									"value": "5086"
+								}
+							]
+						},
+						"description": "Get historic variable instances by parameters"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get tasks by processInstanceId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/runtime/tasks?processInstanceId={id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "processInstanceId",
+									"value": "{id}"
+								}
+							]
+						},
+						"description": "get all tasks of a process instance by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] suspend a process instance",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"action\":\"suspend\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances/{processInstanceId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances",
+								"{processInstanceId}"
+							]
+						},
+						"description": "Suspend or halt a process instance by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[PUT] activate a suspended process instance",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"action\":\"activate\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/runtime/process-instances/{processInstanceId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"runtime",
+								"process-instances",
+								"{processInstanceId}"
+							]
+						},
+						"description": "Activate a suspenden process instance by id"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get historic process instances by Id with variables",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/history/historic-process-instances?processInstanceId={id}&includeProcessVariables=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"historic-process-instances"
+							],
+							"query": [
+								{
+									"key": "processInstanceId",
+									"value": "{id}"
+								},
+								{
+									"key": "includeProcessVariables",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Get historic process instances with Process Variables"
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] get historic task instances by Id with variables",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/history/historic-task-instances?taskId={id}&includeProcessVariables=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"historic-task-instances"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "{id}"
+								},
+								{
+									"key": "includeProcessVariables",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Get historic task instances with Process Variables"
+					},
+					"response": []
+				}
+			],
+			"description": "**Floawble** is the BPM platform used to run the workflows, the engine for the processes. a *BPMN-based* tool. Flowable has a complete API of it own to interact wiht the engine and the processes (templates, instances or historic), however the current endpoints listed are the ones we used the most for general purposes.\n\nClick [here][1], for the complete *Flowable REST API Documentation*.\n\n[1]: http://www.flowable.org/docs/userguide/index.html#restApiChapter"
+		},
+		{
+			"name": "Query",
+			"item": [
+				{
+					"name": "Job Order Query",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"joins\":[\n\t\t{\n\t\t\t\"parameter\":\"idCustomer\",\n\t\t\t\"entity\":\"com.mes.dom.personnel.Person\"\n\t\t}\n\t],\n\t\"filters\":[\n\t\t{\n\t\t\t\"key\":\"parameter.idCustomer.code\",\n\t\t\t\"operation\":\"equals\",\"value\":\"79155392\"\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\"key\":\"hierarchyScope\",\n\t\t\t\"operation\":\"equals\",\n\t\t\t\"value\":\"PRODUCTION\"\n\t\t\t\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/jobOrder/query?size=15&sort=id,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"jobOrder",
+								"query"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "15"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						},
+						"description": "Modo de consulta para una JobOrder"
+					},
+					"response": []
+				},
+				{
+					"name": "Personnel Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"filters\":[\n\t\t{\n\t\t\t\"key\":\"property.address.phone\",\n\t\t\t\"operation\":\"equals\",\"value\":\"4763325\"\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\"key\":\"code\",\n\t\t\t\"operation\":\"equals\",\"value\":\"79706897\"\n\t\t},\n\t\t{\n\t\t\t\"key\":\"description\",\n\t\t\t\"operation\":\"like\",\"value\":\"%SUAREZ%\"\n\t\t}\n\t\t\n\t]\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/mes/personnel/query?size=15&sort=id,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"personnel",
+								"query"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "15"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						},
+						"description": "Personnel Query\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Material Definition Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"filters\":[\n\t\t{\n\t\t\t\"key\":\"property.productType\",\n\t\t\t\"operation\":\"equals\",\"value\":\"sinterizado\"\n\t\t},\n\t\t{\n\t\t\t\"key\":\"code\",\n\t\t\t\"operation\":\"equals\",\"value\":\"SINTE\"\n\t\t},\n\t\t{\n\t\t\t\"key\":\"description\",\n\t\t\t\"operation\":\"like\",\"value\":\"%Sinterizado%\"\n\t\t}\n\t]\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/mes/materialDefinitions/query?size=15&sort=id,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"materialDefinitions",
+								"query"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "15"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						},
+						"description": "Material Definitions Query"
+					},
+					"response": []
+				},
+				{
+					"name": "Work Directive Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"joins\":[\n\t\t{\n\t\t\t\"parameter\":\"idCustomer\",\n\t\t\t\"entity\":\"com.mes.dom.personnel.Person\"\n\t\t}\n\t],\n\t\"filters\":[\n\t\t{\n\t\t\t\"key\":\"parameter.idCustomer.code\",\n\t\t\t\"operation\":\"equals\",\"value\":\"79155392\"\n\t\t},\n\t\t{\n\t\t\t\"key\":\"workType\",\n\t\t\t\"operation\":\"equals\",\n\t\t\t\"value\":\"PRODUCTION\"\n\t\t\t\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/mes/workDirectives/query?size=15&sort=id,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mes",
+								"workDirectives",
+								"query"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "15"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						},
+						"description": "WorkDirective Query"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost",
+			"type": "default"
+		},
+		{
+			"key": "clientId",
+			"value": "b5d207c6-d8c0-4272-933f-14be7be9c55f",
+			"type": "default"
+		},
+		{
+			"key": "tenantId",
+			"value": "labmilanes.com",
+			"type": "default"
+		}
+	]
+}
